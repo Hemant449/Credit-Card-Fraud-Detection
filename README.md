@@ -65,7 +65,7 @@ The notebook's first code cell contains `%load_ext cuml.accel`, which is optiona
 2. Fit preprocessing within each model pipeline to keep learned transformations inside each training fold.
 3. Compare Logistic Regression, standard Random Forest, `balanced_subsample`, and default SMOTE using the same five-fold stratified cross-validation folds.
 4. Generate out-of-fold fraud probabilities from training data.
-5. Select a model and threshold using out-of-fold results. The current target is fraud precision of at least 90% and recall greater than 80%; these targets are goals, not guaranteed outcomes.
+5. Select a model and threshold using out-of-fold results.
 6. Refit the selected model on all of `X_train` and evaluate it on `X_test` once.
 
 SMOTE is contained in an `imblearn` pipeline so it is applied to each fold's training portion only. The validation fold and final test set retain the natural class distribution.
